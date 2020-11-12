@@ -1,5 +1,5 @@
 {% set name = "ecdsa" %}
-{% set version = "0.13" %}
+{% set version = "0.16.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,19 +7,20 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 64cf1ee26d1cde3c73c6d7d107f835fed7c6a2904aef9eac223d57ad800c43fa
+  sha256: 494c6a853e9ed2e9be33d160b41d47afc50a6629b993d2b9c5ad7bb226add892
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv "
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.3
   run:
-    - python
+    - python >=3.3
+    - six >=1.9.0
 
 test:
   imports:
@@ -35,3 +36,4 @@ about:
 extra:
   recipe-maintainers:
     - mariusvniekerk
+    - m-rossi
