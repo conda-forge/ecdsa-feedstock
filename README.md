@@ -5,11 +5,9 @@ Home: http://github.com/warner/python-ecdsa
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ecdsa-feedstock/blob/master/LICENSE.txt)
 
 Summary: ECDSA cryptographic signature library (pure python)
-
-
 
 Current build status
 ====================
@@ -116,5 +114,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@m-rossi](https://github.com/m-rossi/)
 * [@mariusvniekerk](https://github.com/mariusvniekerk/)
 
