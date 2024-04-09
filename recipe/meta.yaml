@@ -17,10 +17,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.3
+    - python >=3.5
   run:
     - gmpy2
-    - python >=3.3
+    - python >=3.5
     - six >=1.9.0
 
 test:
