@@ -6,24 +6,26 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 60eaad1199659900dd0af521ed462b793bbdf867432b3948e87416ae4caf6bf8
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
   run:
     - gmpy2
-    - python >=3.5
+    - python >={{ python_min }}
     - six >=1.9.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - ecdsa
 
