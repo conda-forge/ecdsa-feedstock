@@ -1,5 +1,5 @@
 {% set name = "ecdsa" %}
-{% set version = "0.19.0" %}
+{% set version = "0.19.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 60eaad1199659900dd0af521ed462b793bbdf867432b3948e87416ae4caf6bf8
+  sha256: 478cba7b62555866fcb3bb3fe985e06decbdb68ef55713c4e5ab98c57d508e61
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
